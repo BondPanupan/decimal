@@ -6,7 +6,7 @@ const { bahtToThaiText } = require('./module/currency-mapper-string/thaibaht/bah
 function main() {
   const inputs = [
     new Decimal(1234),
-    new Decimal('33333.75')
+    new Decimal('33333.756')
   ];
 
   console.log('original', inputs);

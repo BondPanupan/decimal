@@ -1,5 +1,8 @@
+const Decimal = require('decimal.js');
+
 function bahtToThaiText(value) {
-  return true;
+  let amount = new Decimal(value).toDecimalPlaces(2, Decimal.ROUND_HALF_UP);
+  return amount;
 }
 
 module.exports = {
