@@ -1,0 +1,23 @@
+{
+  "name": "decimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BondPanupan/decimal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BondPanupan/decimal/issues"
+  },
+  "homepage": "https://github.com/BondPanupan/decimal#readme",
+  "dependencies": {
+    "decimal.js": "^10.6.0"
+  }
+}
