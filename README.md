@@ -32,6 +32,31 @@ bahtToThaiText(new Decimal(-10.5));      // ลบสิบบาทห้าส
 node index.js
 ```
 
+## Testing
+
+No test framework required — tests run with Node.js built-in `assert`.
+
+```bash
+node test.js
+```
+
+### Test Cases Covered
+
+| Input | Expected Output |
+|-------|----------------|
+| `1234` | หนึ่งพันสองร้อยสามสิบสี่บาทถ้วน |
+| `33333.75` | สามหมื่นสามพันสามร้อยสามสิบสามบาทเจ็ดสิบห้าสตางค์ |
+| `11` | สิบเอ็ดบาทถ้วน |
+| `20` | ยี่สิบบาทถ้วน |
+| `1000000` | หนึ่งล้านบาทถ้วน |
+| `1000000000000` | หนึ่งล้านล้านบาทถ้วน |
+| `0.5` | ห้าสิบสตางค์ |
+| `0.01` | หนึ่งสตางค์ |
+| `0` | ศูนย์บาทถ้วน |
+| `-25.50` | ลบยี่สิบห้าบาทห้าสิบสตางค์ |
+
+Tests cover: เอ็ด/ยี่สิบ rules, stacked ล้าน, satang edge cases, rounding, and negative values.
+
 ## Example Output
 
 ```
@@ -52,6 +77,7 @@ Thai text format:  ลบสิบบาทห้าสิบสตางค์
 ```
 decimal/
 ├── index.js
+├── test.js
 ├── module/
 │   └── currency-mapper-string/
 │       └── thaibaht/
