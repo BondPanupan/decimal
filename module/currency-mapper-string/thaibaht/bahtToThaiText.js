@@ -56,14 +56,22 @@ function bahtToThaiText(value) {
 
   const bahtText = readbaht(baht.toFixed(0));
 
+  let text;
+  if (satang === 0) {
+    text = bahtText + 'บาทถ้วน';
+  } else if (baht.isZero()) {
+    text = readbaht(String(satang)) + 'สตางค์';
+  } else {
+    text = bahtText + 'บาท' + readbaht(String(satang)) + 'สตางค์';
+  }
+
   console.log('debug', {
-    baht,
-    satang,
-    bahtText,
+    baht: baht,
+    satang: satang,
+    bahtText: bahtText,
   })
 
-
-  return amount;
+  return negative ? 'ลบ' + text : text;
 }
 
 module.exports = {
